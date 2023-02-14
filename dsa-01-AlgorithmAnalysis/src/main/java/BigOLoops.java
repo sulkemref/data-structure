@@ -1,4 +1,4 @@
-public class BigOSingleLoop {
+public class BigOLoops {
 
     public static void main(String[] args) {
         long numberOfOperations=0;
