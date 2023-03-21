@@ -30,4 +30,44 @@ public class MySinglyLinkedList {
             current = current.next;
         }
     }
+
+    void deleteNode(int value){
+        if (isEmpty()){
+            System.out.println("List is empty");
+            return;
+        }
+
+        Node current= head;
+        Node previous = head;
+
+        while (current!=null){
+//              My solution
+//            if(head.id==value) {
+//                head = current.next;
+//                current.next = null;
+//                size--;
+//            }else if (current.id==value) {
+//                previous.next = current.next;
+//                current.next = null;
+//                size--;
+//            }
+
+            if(current.id == value){
+                if(current==head){
+                    head = current.next;
+                    current.next = null;
+                }else if(current==tail){
+                    tail=previous;
+                    previous.next=null;
+                }else {
+                    previous.next = current.next;
+                    current.next = null;
+                }
+                size--;
+            }
+            previous = current;
+            current = current.next;
+        }
+
+    }
 }
