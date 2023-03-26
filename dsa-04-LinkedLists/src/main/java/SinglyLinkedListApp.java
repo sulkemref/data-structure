@@ -9,13 +9,13 @@ public class SinglyLinkedListApp {
             mylist.add(i);
         }
 
-//        mylist.deleteNode(0);
-        mylist.deleteNode(5);
-        mylist.deleteNode(1);
-        mylist.deleteNode(0);
-        mylist.deleteNode(9);
-        System.out.println(mylist.size);
+
         mylist.printNodes();
+        System.out.println();
+        mylist.removeKthFromLast(10);
+        System.out.println();
+        mylist.printNodes();
+
     }
 
 }
